@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Daniel Nempeque
+ * @author JordanLopez
  */
 public class ConnectionDB {
     private String USERNAME = "root"; //USUARIO DE CADA UNO

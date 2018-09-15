@@ -103,15 +103,22 @@
   </div>
 </div>
 <div id="contactus" class="container-fluid">
-  <div class="col-sm-8">
-      <h2>bsfhagj de la Sabana</h2><br>
-      <h4>
-      Este es un servicio para esta universidad el cual brinda a la comunidad para 
-      mejorar la eficiendcia al momento de la consulta
-      de un objeto perdido
-      </h4><br>
-      <img src="img/iconDow.png" class="center-block" width="30%">      
-      <h4>Proximamente</h4>
+  <div class="col-sm-4 contact-us">
+      <form>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <br>
+    <div class="input-group">
+      <span class="input-group-addon">Text</span>
+      <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+    </div>
+  </form>
     </div>
     <div class="col-sm-4">
         <img src="img/Mapa.png" width="110%">

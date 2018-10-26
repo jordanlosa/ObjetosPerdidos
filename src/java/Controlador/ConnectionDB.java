@@ -19,7 +19,7 @@ public class ConnectionDB {
     private String PASSWORD = ""; //PASSWORD DE CADA UNO
     private String HOST = "localhost"; //HOST DEL SERVIDOR
     private String PORT = "3306"; //ESTE ES EL PUERTO QUE TIENE MYSQL POR DEFECTO O POR LO MENOS EN LA MIA
-    private String DATABASE = "proyecto_final"; //ASI TENGO YO EL NOMBRE; NO COMO PETME
+    private String DATABASE = "objetos_perdidos"; //ASI TENGO YO EL NOMBRE; NO COMO PETME
     private String CLASSNAME = "com.mysql.jdbc.Driver"; // COSAS DE lA CONEXION
     private String URL = "jdbc:mysql://"+HOST+":"+PORT+"/"+DATABASE; // CADENA DE CONEXION
     private Connection con; //OBETO PARA CONECTARSE DESDE CUALQUIER LUGAR

@@ -17,10 +17,12 @@ import java.sql.Statement;
  * @author JORDAN
  */
 public class GestionTipo {
+    
     private Tipo tipo=new Tipo();
     static ConnectionDB connMySQL = new ConnectionDB();	
-	static Statement s = null;
-	static PreparedStatement ps = null;  
+    static Statement s = null;
+    static PreparedStatement ps = null;  
+    
     public void crear(String tipo,String descripcion) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException
     {
         Connection conn = connMySQL.setConeccion();                           
@@ -30,4 +32,7 @@ public class GestionTipo {
             ps.executeUpdate();
             conn.close(); 
     }
+    
+    
+    
 }

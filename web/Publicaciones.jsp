@@ -50,15 +50,19 @@
         
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-2 profile">                    
+                <div class="col-sm-2 profile">       
+                    
+                    <form  action="Publicaciones" method="POST"> 
                     <img class="center-block" src="img/avatar1.png" alt="" width="50px"/>
-                    <h4>g</h4>
-                    <h4>g</h4>
-                    <h4>g</h4>
+                    <h4><input type="text" name="Tipo_publicacion" /></h4>
+                    <h4><input type="text" name="Fecha" /></h4>
+                    <h4><input type="text" name="Mensaje"  /></h4>
                     <h4>g</h4>
                     <h4>g</h4>
                     <h4>g</h4>                                                            
-                    <h4>g</h4>                                                                                                    
+                    <h4>g</h4>        
+                    <input type="submit" id="GuardarP" value="Guardar"/>
+                    </form>
                 </div>
                 <div class="col-sm-8 offset-sm-2">
                     <div class="container profile">

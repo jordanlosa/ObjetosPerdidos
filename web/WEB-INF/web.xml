@@ -4,9 +4,17 @@
         <servlet-name>CreateObject</servlet-name>
         <servlet-class>Controlador.CreateObject</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Publicaciones</servlet-name>
+        <servlet-class>Controlador.Publicaciones</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateObject</servlet-name>
         <url-pattern>/CreateObject</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Publicaciones</servlet-name>
+        <url-pattern>/Publicaciones</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

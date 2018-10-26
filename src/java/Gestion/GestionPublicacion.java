@@ -17,21 +17,41 @@ import java.sql.Statement;
  *
  * @author juandiego1598
  */
-public class GestionPublicacion {
+public class GestionPublicacion extends ConnectionDB{
     
     static ConnectionDB connMySQL = new ConnectionDB();	
     static Statement s = null;
     static CallableStatement cs = null; 
     
-    public void crearPublicacion(Publicacion pub) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException
+    public int crearPublicacion(Publicacion pub) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException
     {
+        int r=0;
+        try {
+            
             Connection conn = connMySQL.setConeccion();                           
             cs = conn.prepareCall("{call insertar_publicacion (?,?,?)}");	            
             cs.setString(1,pub.getTipo_publicacion());
             cs.setString(2,pub.getFecha());       
             cs.setString(3,pub.getMensaje());       
-            cs.executeUpdate();
+            r= cs.executeUpdate();
             conn.close(); 
+            
+            
+        } catch (Exception e) {
+            System.err.println("ERROR: " + e + "es aqui");
+        } finally {
+            try {
+                if (super.getConnection()!= null) {
+                    super.getConnection().close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+            } catch (Exception e) {
+                System.err.println("ERROR: " + e);
+            }
+        }
+        return r;
     }
     
     

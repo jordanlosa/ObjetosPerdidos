@@ -47,7 +47,7 @@ public class Login extends HttpServlet {
             Usuario us = null;
             us = new Usuario(user, pass);                       
             HttpSession session = request.getSession();
-            if(gest.Login_in(us))
+            if(!(gest.Login_in(us).getNombre().equals("")))
             {
                 session.setAttribute("user", us);
                 response.sendRedirect("Publicaciones.jsp");

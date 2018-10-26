@@ -16,24 +16,23 @@ import java.sql.SQLException;
  */
 public class GestionUsuario extends Controlador.ConnectionDB {
     
-    public Boolean Login_in(Usuario usu) throws SQLException{
+    public Usuario Login_in(Usuario usu) throws SQLException{
         super.makeConnection();
         PreparedStatement pst = null;
-        ResultSet rs = null;
-        Boolean existe = false;
+        ResultSet rs = null;        
         String Query = "Select * from Usuario where Usuario = ? and Contrasena = ?";
          try{
                 pst = getConnection().prepareStatement(Query);
                 pst.setString(1, usu.getUsuario());
                 pst.setString(2, usu.getContrasena());
                 rs = pst.executeQuery();                
-                if(rs.absolute(1)){
-                        existe = true;
+                if(rs.absolute(1)){                        
+                        usu.setNombre(rs.getString(2));
                     }                  
          }
          catch(Exception e){
              
          } 
-         return existe;
+         return usu;
     }    
 }

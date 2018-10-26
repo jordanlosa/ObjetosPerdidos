@@ -10,6 +10,7 @@ package Modelo;
  * @author JORDAN
  */
 public class Usuario {
+    private int ID;
     private String Nombre;
     private String Usuario;
     private String Contrasena;
@@ -18,8 +19,15 @@ public class Usuario {
         this.Usuario = Usuario;
         this.Contrasena = Contrasena;
     }
-        
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+            
     public String getNombre() {
         return Nombre;
     }

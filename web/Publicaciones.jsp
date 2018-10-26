@@ -4,7 +4,9 @@
     Author     : JORDAN
 --%>
 
+<%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,7 +41,16 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>USUARIO---</a></li>                        
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>
+                                <%
+                                     HttpSession session1 = request.getSession();
+                                     if(session1.getAttribute("user") != null)
+                                     {
+                                         Usuario us = (Usuario) session1.getAttribute("user");
+                                         out.print(us.getNombre());
+                                     }                                     
+                                %>
+                            </a></li>                        
                     </ul>                                        
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-tasks"></span></a></li>                        
